@@ -68,6 +68,7 @@ macro(build_orocos_kdl)
     PATCH_COMMAND
       ${CMAKE_COMMAND} -E chdir <SOURCE_DIR> git apply -p1 --ignore-space-change --whitespace=nowarn
         ${CMAKE_CURRENT_SOURCE_DIR}/0001-include_project_name.patch
+        ${CMAKE_CURRENT_SOURCE_DIR}/0001-Fix-vs2022.patch
   )
 
   # The external project will install to the build folder, but we'll install that on make install.

@@ -1,0 +1,18 @@
+ python_orocos_kdl/PyKDL/PyKDL.h | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/python_orocos_kdl/PyKDL/PyKDL.h b/python_orocos_kdl/PyKDL/PyKDL.h
+index b72a81b..d5968e8 100644
+--- a/python_orocos_kdl/PyKDL/PyKDL.h
++++ b/python_orocos_kdl/PyKDL/PyKDL.h
+@@ -22,6 +22,10 @@
+ //License along with this library; if not, write to the Free Software
+ //Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+ 
++#if defined(_MSC_VER)
++#include <BaseTsd.h>
++typedef SSIZE_T ssize_t;
++#endif
+ 
+ #include <pybind11/pybind11.h>
+ #include <pybind11/eigen.h>
